@@ -1,7 +1,11 @@
-const Portfolio = () => {
-  return (
-    <>Portfolio</>
-  )
-}
+import FrontLayout from "../components/FrontLayout";
 
-export default Portfolio
+const Portfolio = () => {
+    return (
+        <>
+            <FrontLayout>Portfolio Page</FrontLayout>
+        </>
+    );
+};
+
+export default Portfolio;

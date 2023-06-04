@@ -23,12 +23,15 @@ $dotShape: url(#{$imagePath}/dot-shape.png);
     --primary_color: #{$primary_color};
     --secondary_color: #{$secondary_color};
     --tertiary_color: #{$tertiary_color};
+    --quaternary_color: #{$quaternary_color};
+    --body_color: #{$body_color};
     --white_color: #{$white_color};
     --black_color: #{$black_color};
     --gray_color1: #{$gray_color1};
     --gray_color2: #{$gray_color2};
     --gray_color3: #{$gray_color3};
     --box_shadow: 0 3px 6px #{rgba($black_color, 16%)};
+    --radius: 7px;
 }
 
 * {
@@ -48,6 +51,7 @@ body {
     font-family: var(--primary_font_family);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--body_color);
 }
 
 img {
@@ -96,7 +100,7 @@ p {
     }
 }
 
-.sec-wp {
+.sec_wp {
     position: relative;
     z-index: 4;
 }
@@ -223,7 +227,6 @@ p {
 // Header Start
 .main_header {
     border-bottom: 1px solid var(--black_color);
-    background-color: var(--white_color);
     position: relative;
     z-index: 100;
 
@@ -383,7 +386,7 @@ p {
         }
 
         .banner_img {
-            border-radius: 7px;
+            border-radius: var(--radius);
 
             &.banner_img1 {
                 grid-column: 1/4;
@@ -400,5 +403,45 @@ p {
                 grid-row: 2/2;
             }
         }
+    }
+}
+
+// Banner End
+
+// About Start
+.about_sec {
+    padding-block: 88px 70px;
+
+    .about_img {
+        height: 412px;
+        width: 100%;
+        border-radius: var(--radius);
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 16px;
+            left: -16px;
+            width: 100%;
+            height: 100%;
+            background-color: var(--quaternary_color);
+            z-index: -1;
+        }
+
+        &:after {
+            @include back_img($back_image: $dotShape);
+            content: "";
+            position: absolute;
+            bottom: -62px;
+            right: 80px;
+            width: 75px;
+            height: 156px;
+            z-index: -2;
+        }
+    }
+
+    .about_content {
+        padding-left: 70px;
     }
 }

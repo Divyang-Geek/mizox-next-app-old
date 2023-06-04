@@ -4,13 +4,12 @@ h3,
 h4,
 h5,
 h6 {
-    // font-weight: bold;
+    font-weight: 500;
     font-family: var(--primary_font_family);
 }
 
 .h1_title {
     @include font-size($h1_font_sizes);
-    font-weight: 500;
 }
 
 .h2_title {
@@ -18,11 +17,6 @@ h6 {
     color: var(--uc-secondary-color);
     margin-bottom: 15px;
     position: relative;
-    text-transform: uppercase;
-
-    & span {
-        font-weight: 400;
-    }
 }
 
 .h3_title {
