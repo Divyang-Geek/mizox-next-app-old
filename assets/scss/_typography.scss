@@ -1,0 +1,44 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // font-weight: bold;
+    font-family: var(--primary_font_family);
+}
+
+.h1_title {
+    @include font-size($h1_font_sizes);
+    font-weight: 500;
+}
+
+.h2_title {
+    @include font-size($h2_font_sizes);
+    color: var(--uc-secondary-color);
+    margin-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+
+    & span {
+        font-weight: 400;
+    }
+}
+
+.h3_title {
+    @include font-size($h3_font_sizes);
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.h4_title {
+    @include font-size($h4_font_sizes);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+body,
+p {
+    @include font-size($p_body_font_sizes);
+}
