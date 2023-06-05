@@ -16,12 +16,12 @@
     }
 }
 
-@mixin back_img($back_repeat: no-repeat, $back_size: cover, $back_position_x: 50%, $back_position_y: 50%, $back_image: initial) {
+@mixin back_img($back_repeat: no-repeat, $back_size: cover, $back_position_x: 50%, $back_position_y: 50%) {
     background: {
         repeat: $back_repeat;
         size: $back_size;
         position: $back_position_x $back_position_y;
-        image: $back_image;
+        // image: $back_image;
     }
 }
 

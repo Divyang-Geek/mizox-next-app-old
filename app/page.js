@@ -1,11 +1,14 @@
 "use client";
 import { Col, Container, Row } from "react-bootstrap";
 import FrontLayout from "./components/FrontLayout";
-import Button from "./components/Common/UI/Button";
+import Button from "./components/UI/Button";
 import bannerImg1 from "@/assets/images/banner-image1.png";
 import bannerImg2 from "@/assets/images/banner-image2.png";
 import bannerImg3 from "@/assets/images/banner-image3.png";
 import aboutImg from "@/assets/images/about-image.png";
+import Services from "./components/Common/services";
+import PortfolioSec from "./components/Common/portfolio";
+import PricingSec from "./components/Common/pricing";
 
 const Index = () => {
     const bannerData = [
@@ -60,12 +63,26 @@ const Index = () => {
                                     <div className="about_content">
                                         <h2 className="h2_title">Work Together for your Business Success.</h2>
                                         <p>Lorem ipsum dolor sit amet consec tetur notted adipisi cing elit sed do tempor ut labore et dolore magna aliqua Lorem ipsum dolor sit amet elit tell us scelerisque aenean simply.</p>
+                                        <div className="about_services">
+                                            <div className="about_service_box">
+                                                <h3 className="h3_title">Project Planning</h3>
+                                                <p>Lorem ipsum dolor sit amet consec tetur notted adipisi cing elit sed</p>
+                                            </div>
+                                            <div className="about_service_box">
+                                                <h3 className="h3_title">Building Quality</h3>
+                                                <p>Lorem ipsum dolor sit amet consec tetur notted adipisi cing elit sed</p>
+                                            </div>
+                                        </div>
+                                        <Button url="/">Discover more</Button>
                                     </div>
                                 </Col>
                             </Row>
                         </Container>
                     </div>
                 </section>
+                <Services />
+                <PortfolioSec />
+                <PricingSec />
             </FrontLayout>
         </>
     );

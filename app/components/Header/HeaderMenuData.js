@@ -18,8 +18,8 @@ export const HeaderMenuData = [
     },
     {
         id: "3",
-        title: "Services",
-        link: "/services",
+        title: "Service",
+        link: "/service",
     },
     {
         id: "4",

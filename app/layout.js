@@ -8,7 +8,7 @@ export const poppinsFont = Poppins({
     style: ["normal", "italic"],
     subsets: ["latin"],
     display: "swap",
-    variable: "--primary_font_family",
+    variable: "--primary_font",
 });
 
 export const rasaFont = Rasa({
@@ -16,7 +16,7 @@ export const rasaFont = Rasa({
     style: ["normal", "italic"],
     subsets: ["latin"],
     display: "swap",
-    variable: "--secondary_font_family",
+    variable: "--secondary_font",
 });
 
 export const metadata = {
