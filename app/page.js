@@ -1,31 +1,21 @@
 "use client";
+
+// Images
+import aboutImg from "@/assets/images/about-image.png";
+
+// Components
 import { Col, Container, Row } from "react-bootstrap";
 import FrontLayout from "./components/FrontLayout";
 import Button from "./components/UI/Button";
-import bannerImg1 from "@/assets/images/banner-image1.png";
-import bannerImg2 from "@/assets/images/banner-image2.png";
-import bannerImg3 from "@/assets/images/banner-image3.png";
-import aboutImg from "@/assets/images/about-image.png";
 import Services from "./components/Common/services";
 import PortfolioSec from "./components/Common/portfolio";
 import PricingSec from "./components/Common/pricing";
+import WhyChooseUs from "./components/Common/whyChooseUs";
+import Title from "./components/UI/Title";
+import BlogSec from "./components/Common/blogSec";
+import BannerData from "./api/bannerData";
 
 const Index = () => {
-    const bannerData = [
-        {
-            id: 1,
-            img: bannerImg1,
-        },
-        {
-            id: 2,
-            img: bannerImg2,
-        },
-        {
-            id: 3,
-            img: bannerImg3,
-        },
-    ];
-
     return (
         <>
             <FrontLayout>
@@ -41,7 +31,7 @@ const Index = () => {
                                 </Col>
                                 <Col lg={7}>
                                     <div className="banner_imgs">
-                                        {bannerData?.map((data) => {
+                                        {BannerData?.map((data) => {
                                             const { id, img } = data;
 
                                             return <div className={`banner_img back_img ${`banner_img${id}`}`} key={id} style={{ backgroundImage: `url(${img.src})` }}></div>;
@@ -61,7 +51,7 @@ const Index = () => {
                                 </Col>
                                 <Col lg={7}>
                                     <div className="about_content">
-                                        <h2 className="h2_title">Work Together for your Business Success.</h2>
+                                        <Title>Work Together for your Business Success.</Title>
                                         <p>Lorem ipsum dolor sit amet consec tetur notted adipisi cing elit sed do tempor ut labore et dolore magna aliqua Lorem ipsum dolor sit amet elit tell us scelerisque aenean simply.</p>
                                         <div className="about_services">
                                             <div className="about_service_box">
@@ -83,6 +73,8 @@ const Index = () => {
                 <Services />
                 <PortfolioSec />
                 <PricingSec />
+                <WhyChooseUs />
+                <BlogSec />
             </FrontLayout>
         </>
     );

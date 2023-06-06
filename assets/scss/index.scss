@@ -144,6 +144,11 @@ p {
         min-height: 37px;
         padding: 6px 14px;
     }
+    &.xs_btn {
+        min-width: 72px;
+        min-height: 28px;
+        padding: 2px 14px;
+    }
 }
 
 .sec-title {
@@ -260,6 +265,10 @@ p {
         background-color: var(--tertiary_color);
         color: var(--black_color);
     }
+}
+
+.text_center {
+    text-align: center;
 }
 
 // Common End
@@ -693,9 +702,25 @@ p {
 .pricing_sec {
     padding-block: 80px;
 
-    .row {
-        --bs-gutter-x: 40px;
-        --bs-gutter-y: 40px;
+    .pricing_row {
+        position: relative;
+
+        &:after {
+            @include back_img;
+            background-image: $dotShape;
+            content: "";
+            position: absolute;
+            bottom: -148px;
+            right: -40px;
+            width: 75px;
+            height: 156px;
+            z-index: -2;
+        }
+
+        .row {
+            --bs-gutter-x: 40px;
+            --bs-gutter-y: 40px;
+        }
     }
 
     .pricing_box_wp {
@@ -710,12 +735,15 @@ p {
             min-width: 44px;
             min-height: 44px;
             margin-bottom: 12px;
+            padding-inline: 5px;
         }
 
         .pricing_box {
+            @include d_flex($align: flex-start);
+            flex-direction: column;
             position: relative;
             background-color: var(--white_color);
-            padding-inline: 87px 60px;
+            padding-inline: 75px 60px;
             padding-block: 52px 41px;
             border-radius: var(--radius);
 
@@ -728,6 +756,270 @@ p {
                 height: 100%;
                 background-color: var(--quaternary_color);
                 z-index: -1;
+            }
+
+            .h3_title {
+                margin-bottom: 14px;
+            }
+
+            .pricing_box_price {
+                margin-block: 10px 30px;
+
+                .currency,
+                .price {
+                    font-size: 36px;
+                    font-weight: 600;
+                    line-height: 1.1;
+                    font-family: var(--secondary_font);
+                }
+
+                .period {
+                    color: var(--gray_color2);
+                }
+            }
+
+            .pricing_box_content {
+                margin-bottom: 35px;
+
+                > p {
+                    color: var(--secondary_color);
+                }
+
+                .pricing_box_services {
+                    margin-top: 35px;
+
+                    ul {
+                        @include d_flex($align: flex-start);
+                        flex-direction: column;
+                        gap: 15px;
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+
+                            img {
+                                flex: 0 0 auto;
+                                width: 16px;
+                                height: 16px;
+                            }
+
+                            span {
+                                font-weight: 300;
+                            }
+
+                            &.disable_service {
+                                color: var(--gray_color3);
+                                text-decoration-line: line-through;
+
+                                img {
+                                    filter: brightness(0) saturate(100%) invert(64%) sepia(3%) saturate(35%) hue-rotate(14deg) brightness(96%) contrast(86%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sec_btn {
+                margin-inline: auto;
+            }
+        }
+    }
+}
+
+// Pricing End
+
+// Why Choose Us Start
+
+.why_choose_us_sec {
+    padding-block: 100px 85px;
+    position: relative;
+
+    &:before {
+        @include back_img;
+        background-image: $verticalShape;
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 522px;
+        height: 829px;
+        opacity: 0.3;
+        z-index: 1;
+    }
+
+    .why_choose_us_img {
+        width: 100%;
+        height: 562px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 23px;
+            left: -23px;
+            width: 52%;
+            height: 100%;
+            background-color: var(--quaternary_color);
+            z-index: -1;
+        }
+    }
+
+    .why_choose_us_content {
+        max-width: 450px;
+        margin-left: auto;
+        position: relative;
+
+        &:after {
+            @include back_img;
+            background-image: $dotShape;
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 160px;
+            width: 75px;
+            height: 156px;
+            z-index: -2;
+        }
+
+        .sec_title {
+            margin-bottom: 50px;
+        }
+
+        .why_choose_us_boxes {
+            .why_choose_us_box {
+                @include d_flex($align: flex-start);
+                flex-direction: column;
+                gap: 9px;
+
+                &:not(:last-child) {
+                    padding-bottom: 30px;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid var(--gray_color4);
+                }
+
+                .why_choose_us_box_img {
+                    --size: 50px;
+                    @include d_flex;
+                    width: var(--size);
+                    height: var(--size);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .why_choose_us_box_content {
+                    @include d_flex($align: flex-start);
+                    flex-direction: column;
+                    gap: 9px;
+                }
+            }
+        }
+    }
+}
+
+// Why Choose Us End
+
+// Blog Start
+
+.blog_sec {
+    padding-block: 65px;
+
+    .sec_title {
+        margin-bottom: 63px;
+    }
+
+    .blog_row {
+        .row {
+            --bs-gutter-x: 22px;
+            --bs-gutter-y: 22px;
+        }
+    }
+
+    .blog_box_wp {
+        position: relative;
+
+        .blog_box_date {
+            @include d_flex($dis_flex: inline-flex);
+            font-family: var(--secondary_font);
+            background-color: var(--secondary_color);
+            color: var(--white_color);
+            font-size: 24px;
+            font-weight: 600;
+            border-radius: var(--radius);
+            min-width: 86px;
+            min-height: 33px;
+            margin-bottom: 12px;
+            padding-inline: 5px;
+        }
+
+        .blog_box {
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 13px;
+                left: -13px;
+                width: 100%;
+                height: 100%;
+                background-color: var(--quaternary_color);
+                z-index: -1;
+            }
+
+            .blog_box_img {
+                width: 100%;
+                height: 250px;
+                border-radius: var(--radius) var(--radius) 0 0;
+            }
+
+            .blog_box_content {
+                @include d_flex;
+                flex-direction: column;
+                border-radius: var(--radius);
+                background-color: var(--white_color);
+                margin-top: -50px;
+                position: relative;
+                z-index: 2;
+                padding: 0 20px 20px;
+
+                .blog_box_author {
+                    --size: 54px;
+                    @include d_flex;
+                    flex-direction: column;
+                    gap: 2px;
+                    margin-top: calc(var(--size) * -0.5);
+                    margin-bottom: 2px;
+
+                    img {
+                        width: var(--size);
+                        height: var(--size);
+                        object-fit: cover;
+                        object-position: center;
+                        border: 1px solid var(--secondary_color);
+                        border-radius: 50%;
+                        display: block;
+                    }
+
+                    span {
+                        font-size: 12px;
+                        font-weight: 300;
+                    }
+                }
+
+                .blog_box_footer {
+                    @include d_flex($justify: space-between);
+                    margin-top: 20px;
+                    width: 100%;
+
+                    .blog_box_comment {
+                        @include d_flex;
+                        gap: 5px;
+                    }
+                }
             }
         }
     }

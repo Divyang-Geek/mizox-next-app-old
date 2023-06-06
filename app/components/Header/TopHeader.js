@@ -1,7 +1,10 @@
-import { Col, Container, Row } from "react-bootstrap";
+// Images
 import mailIcon from "@/assets/images/mail.png";
 import callIcon from "@/assets/images/call.png";
 import locationIcon from "@/assets/images/location.png";
+
+// Components
+import { Col, Container, Row } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -40,7 +43,7 @@ const TopHeader = () => {
                                         return (
                                             <li key={id}>
                                                 <Link href={link}>
-                                                    <Image src={icon} alt={text} priority={true} width={15} height={15}/>
+                                                    <Image src={icon} alt={text} priority={true} width={15} height={15} />
                                                     <span>{text}</span>
                                                 </Link>
                                             </li>

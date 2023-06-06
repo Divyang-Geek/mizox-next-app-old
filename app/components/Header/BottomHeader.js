@@ -1,3 +1,4 @@
+// Components
 import { Col, Container, Row } from "react-bootstrap";
 import SiteLogo from "../SiteLogo";
 import Button from "../UI/Button";

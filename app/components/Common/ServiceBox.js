@@ -1,9 +1,9 @@
+// Components
 import Image from "next/image";
 import Button from "../UI/Button";
 
 const ServiceBox = ({ ...data }) => {
     const { id, image, icon, title, content, url } = data;
-    // console.log(data);
 
     return (
         <>
@@ -17,7 +17,9 @@ const ServiceBox = ({ ...data }) => {
                         </div>
                         <h3 className="h3_title">{title}</h3>
                         <p>{content}</p>
-                        <Button url={url} size="sm">Start Course</Button>
+                        <Button url={url} size="sm">
+                            Start Course
+                        </Button>
                     </div>
                 </div>
             </div>

@@ -14,7 +14,6 @@ h6 {
 
 .h2_title {
     @include font-size($h2_font_sizes);
-    color: var(--uc-secondary-color);
     margin-bottom: 20px;
     position: relative;
 }

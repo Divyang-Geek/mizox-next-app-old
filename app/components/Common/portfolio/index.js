@@ -1,8 +1,10 @@
+// Components
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { GrPlayFill } from "react-icons/gr";
 import PortfolioData from "./PortfolioData";
+import Title from "../../UI/Title";
 
 const PortfolioSec = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -38,7 +40,7 @@ const PortfolioSec = () => {
                             </Col>
                             <Col lg={7}>
                                 <div className="portfolio_content">
-                                    <h2 className="h2_title">Keep your Vision to Our Projects</h2>
+                                    <Title>Keep your Vision to Our Projects</Title>
                                     <p>Lorem ipsum dolor sit amet consec tetur notted adipisi cing elit sed Lorem ipsum dolor sit amet consec tetur notted adipisi cing elit sed</p>
                                     <div className="portfolio_counter_wp">
                                         {PortfolioData?.map((data) => {

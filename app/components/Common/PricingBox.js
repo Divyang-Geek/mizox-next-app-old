@@ -1,5 +1,6 @@
-import React from "react";
 import Button from "../UI/Button";
+import Image from "next/image";
+import checkImg from "../../../assets/images/check.png";
 
 const PricingBox = ({ ...data }) => {
     const { id, title, price, description, services, url } = data;
@@ -19,8 +20,14 @@ const PricingBox = ({ ...data }) => {
                         <p>{description}</p>
                         <div className="pricing_box_services">
                             <ul>
-                                {services?.map((data, index) => {
-                                    return <li key={index}>{data}</li>;
+                                {services?.map((data) => {
+                                    const { id, text, disable } = data;
+                                    return (
+                                        <li key={id} className={disable === true ? "disable_service" : ""}>
+                                            <Image src={checkImg} alt="Check Image" width={16} height={16} />
+                                            <span>{text}</span>
+                                        </li>
+                                    );
                                 })}
                             </ul>
                         </div>

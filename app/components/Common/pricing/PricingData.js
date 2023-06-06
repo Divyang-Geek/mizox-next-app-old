@@ -8,31 +8,85 @@ const PricingData = [
             type: "Monthly",
         },
         description: "All services are included:",
-        services: ["Full access to library", "Complete documentation", "24/7 Support", "Cloud storage backup"],
+        services: [
+            {
+                id: 1.1,
+                text: "Full access to library",
+            },
+            {
+                id: 1.2,
+                text: "Complete documentation",
+            },
+            {
+                id: 1.3,
+                text: "24/7 Support",
+                disable: true,
+            },
+            {
+                id: 1.4,
+                text: "Cloud storage backup",
+                disable: true,
+            },
+        ],
         url: "/pricing",
     },
     {
         id: 2,
-        title: "Basic Plan",
+        title: "Standard plan",
         price: {
             currency: "$",
-            amount: 199,
+            amount: 399,
             type: "Monthly",
         },
         description: "All services are included:",
-        services: ["Full access to library", "Complete documentation", "24/7 Support", "Cloud storage backup"],
+        services: [
+            {
+                id: 1.1,
+                text: "Full access to library",
+            },
+            {
+                id: 1.2,
+                text: "Complete documentation",
+            },
+            {
+                id: 1.3,
+                text: "24/7 Support",
+            },
+            {
+                id: 1.4,
+                text: "Cloud storage backup",
+                disable: true,
+            },
+        ],
         url: "/pricing",
     },
     {
         id: 3,
-        title: "Basic Plan",
+        title: "Advanced  Plan",
         price: {
             currency: "$",
-            amount: 199,
+            amount: 599,
             type: "Monthly",
         },
         description: "All services are included:",
-        services: ["Full access to library", "Complete documentation", "24/7 Support", "Cloud storage backup"],
+        services: [
+            {
+                id: 1.1,
+                text: "Full access to library",
+            },
+            {
+                id: 1.2,
+                text: "Complete documentation",
+            },
+            {
+                id: 1.3,
+                text: "24/7 Support",
+            },
+            {
+                id: 1.4,
+                text: "Cloud storage backup",
+            },
+        ],
         url: "/pricing",
     },
 ];
