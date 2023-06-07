@@ -3,9 +3,9 @@ import whyChooseUsImg from "@/assets/images/why-choose-us-img.png";
 
 // Components
 import { Col, Container, Row } from "react-bootstrap";
-import WhyChooseUsData from "./WhyChooseUsData";
 import Image from "next/image";
-import Title from "../../UI/Title";
+import Title from "../UI/Title";
+import whyChooseUsData from "@/app/api/whyChooseUsData";
 
 const WhyChooseUs = () => {
     return (
@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
                                 <div className="why_choose_us_content">
                                     <Title>Why Choose us?</Title>
                                     <div className="why_choose_us_boxes">
-                                        {WhyChooseUsData?.map((data) => {
+                                        {whyChooseUsData?.map((data) => {
                                             const { id, icon, title, text } = data;
                                             return (
                                                 <div className="why_choose_us_box" key={id}>

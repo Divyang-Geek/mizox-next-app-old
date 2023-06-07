@@ -1,21 +1,27 @@
 // Components
 import { Col, Container, Row } from "react-bootstrap";
-import PricingBox from "../PricingBox";
-import PricingData from "../pricing/PricingData";
+import Title from "../UI/Title";
+import BlogBox from "./BlogBox";
+import blogData from "@/app/api/blogData";
 
-const PricingSec = () => {
+const BlogSec = () => {
     return (
         <>
-            <section className="pricing_sec">
+            <section className="blog_sec">
                 <div className="sec_wp">
                     <Container>
-                        <div className="pricing_row">
+                        <Row>
+                            <Col lg={12}>
+                                <Title className="text_center">News & Articles</Title>
+                            </Col>
+                        </Row>
+                        <div className="blog_row">
                             <Row>
-                                {PricingData?.map((data) => {
+                                {blogData?.slice(0, 3).map((data) => {
                                     const { id } = data;
                                     return (
                                         <Col lg={4} key={id}>
-                                            <PricingBox {...data} />
+                                            <BlogBox {...data} />
                                         </Col>
                                     );
                                 })}
@@ -28,4 +34,4 @@ const PricingSec = () => {
     );
 };
 
-export default PricingSec;
+export default BlogSec;

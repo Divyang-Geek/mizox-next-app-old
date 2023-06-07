@@ -3,7 +3,7 @@ import portfolioIcon2 from "@/assets/images/portfolio-icon2.png";
 import portfolioIcon3 from "@/assets/images/portfolio-icon3.png";
 import portfolioIcon4 from "@/assets/images/portfolio-icon4.png";
 
-const PortfolioData = [
+const portfolioData = [
     {
         id: 1,
         icon: portfolioIcon1,
@@ -30,4 +30,4 @@ const PortfolioData = [
     },
 ];
 
-export default PortfolioData;
+export default portfolioData;

@@ -7,7 +7,7 @@ import serviceIcon2 from "@/assets/images/service-icon2.png";
 import serviceIcon3 from "@/assets/images/service-icon3.png";
 import serviceIcon4 from "@/assets/images/service-icon4.png";
 
-const ServicesData = [
+const servicesData = [
     {
         id: 1,
         image: serviceImg1,
@@ -42,4 +42,4 @@ const ServicesData = [
     },
 ];
 
-export default ServicesData;
+export default servicesData;

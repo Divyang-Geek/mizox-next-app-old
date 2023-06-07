@@ -2,7 +2,7 @@
 import whyChooseUsIcon1 from "@/assets/images/why-choose-us-icon1.png";
 import whyChooseUsIcon2 from "@/assets/images/why-choose-us-icon2.png";
 
-const WhyChooseUsData = [
+const whyChooseUsData = [
     {
         id: 1,
         icon: whyChooseUsIcon1,
@@ -17,4 +17,4 @@ const WhyChooseUsData = [
     },
 ];
 
-export default WhyChooseUsData;
+export default whyChooseUsData;

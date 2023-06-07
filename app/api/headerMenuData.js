@@ -1,4 +1,4 @@
-export const HeaderMenuData = [
+const headerMenuData = [
     {
         id: "1",
         title: "Home",
@@ -37,3 +37,5 @@ export const HeaderMenuData = [
         link: "/contact",
     },
 ];
+
+export default headerMenuData;

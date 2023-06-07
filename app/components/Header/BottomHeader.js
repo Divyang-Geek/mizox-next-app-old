@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import SiteLogo from "../SiteLogo";
 import Button from "../UI/Button";
 import Menu from "../Menu";
-import { HeaderMenuData } from "./HeaderMenuData";
+import headerMenuData from "@/app/api/headerMenuData";
 
 const BottomHeader = () => {
     return (
@@ -17,7 +17,7 @@ const BottomHeader = () => {
                         <Col lg={9}>
                             <div className="header_menu_wp">
                                 <div className="header_menu">
-                                    <Menu data={HeaderMenuData} />
+                                    <Menu data={headerMenuData} />
                                 </div>
                                 <Button url="/contact">Get A Quote</Button>
                             </div>

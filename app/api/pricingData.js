@@ -1,4 +1,4 @@
-const PricingData = [
+const pricingData = [
     {
         id: 1,
         title: "Basic Plan",
@@ -91,4 +91,4 @@ const PricingData = [
     },
 ];
 
-export default PricingData;
+export default pricingData;

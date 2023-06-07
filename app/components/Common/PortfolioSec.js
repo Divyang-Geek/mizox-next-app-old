@@ -3,8 +3,8 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { GrPlayFill } from "react-icons/gr";
-import PortfolioData from "./PortfolioData";
-import Title from "../../UI/Title";
+import Title from "../UI/Title";
+import portfolioData from "@/app/api/portfolioData";
 
 const PortfolioSec = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -43,7 +43,7 @@ const PortfolioSec = () => {
                                     <Title>Keep your Vision to Our Projects</Title>
                                     <p>Lorem ipsum dolor sit amet consec tetur notted adipisi cing elit sed Lorem ipsum dolor sit amet consec tetur notted adipisi cing elit sed</p>
                                     <div className="portfolio_counter_wp">
-                                        {PortfolioData?.map((data) => {
+                                        {portfolioData?.map((data) => {
                                             const { id, icon, text, count } = data;
                                             return (
                                                 <div className="count_box" key={id}>

@@ -6,7 +6,7 @@ import blogAuthor1 from "@/assets/images/blog-author1.png";
 import blogAuthor2 from "@/assets/images/blog-author2.png";
 import blogAuthor3 from "@/assets/images/blog-author3.png";
 
-const BlogData = [
+const blogData = [
     {
         id: 1,
         publishDate: {
@@ -66,4 +66,4 @@ const BlogData = [
     },
 ];
 
-export default BlogData;
+export default blogData;

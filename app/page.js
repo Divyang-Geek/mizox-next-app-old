@@ -7,13 +7,13 @@ import aboutImg from "@/assets/images/about-image.png";
 import { Col, Container, Row } from "react-bootstrap";
 import FrontLayout from "./components/FrontLayout";
 import Button from "./components/UI/Button";
-import Services from "./components/Common/services";
-import PortfolioSec from "./components/Common/portfolio";
-import PricingSec from "./components/Common/pricing";
-import WhyChooseUs from "./components/Common/whyChooseUs";
+import bannerData from "./api/bannerData";
+import ServiceSec from "./components/common/ServiceSec";
+import PortfolioSec from "./components/common/PortfolioSec";
+import PricingSec from "./components/common/PricingSec";
+import WhyChooseUs from "./components/common/WhyChooseUsSec";
 import Title from "./components/UI/Title";
-import BlogSec from "./components/Common/blogSec";
-import BannerData from "./api/bannerData";
+import BlogSec from "./components/common/BlogSec";
 
 const Index = () => {
     return (
@@ -31,7 +31,7 @@ const Index = () => {
                                 </Col>
                                 <Col lg={7}>
                                     <div className="banner_imgs">
-                                        {BannerData?.map((data) => {
+                                        {bannerData?.map((data) => {
                                             const { id, img } = data;
 
                                             return <div className={`banner_img back_img ${`banner_img${id}`}`} key={id} style={{ backgroundImage: `url(${img.src})` }}></div>;
@@ -70,7 +70,7 @@ const Index = () => {
                         </Container>
                     </div>
                 </section>
-                <Services />
+                <ServiceSec />
                 <PortfolioSec />
                 <PricingSec />
                 <WhyChooseUs />

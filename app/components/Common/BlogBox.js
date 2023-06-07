@@ -28,7 +28,7 @@ const BlogBox = ({ ...data }) => {
                         <div className="blog_box_footer">
                             {comment && (
                                 <div className="blog_box_comment">
-                                    <Image src={chatImg.src} alt="Chat Image" width={18} height={18} />
+                                    <Image src={chatImg.src} alt="Chat Image" width={20} height={19} />
                                     <span>{count} Comment</span>
                                 </div>
                             )}
