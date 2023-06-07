@@ -25,7 +25,7 @@ import Head from "next/head";
 // });
 
 export const metadata = {
-    title: "Mizox",
+    title: "Mizox company",
     description: "Mizox - Design and Development",
 };
 
@@ -34,6 +34,8 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <Head>
                 <link rel="icon" href="/favicon.ico" />
+                <title>My page title</title>
+                <meta property="og:title" content="My page title" key="title" />
             </Head>
             {/* <body className={`${poppins.variable} ${rasa.variable}`} suppressHydrationWarning={true}> */}
             <body suppressHydrationWarning={true}>{children}</body>

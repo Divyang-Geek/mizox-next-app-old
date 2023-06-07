@@ -7,7 +7,7 @@ import Image from "next/image";
 import Title from "../UI/Title";
 import whyChooseUsData from "@/app/api/whyChooseUsData";
 
-const WhyChooseUs = () => {
+const WhyChooseUsSec = () => {
     return (
         <>
             <section className="why_choose_us_sec">
@@ -46,4 +46,4 @@ const WhyChooseUs = () => {
     );
 };
 
-export default WhyChooseUs;
+export default WhyChooseUsSec;

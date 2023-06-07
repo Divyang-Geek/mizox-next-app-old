@@ -11,9 +11,11 @@ import bannerData from "./api/bannerData";
 import ServiceSec from "./components/common/ServiceSec";
 import PortfolioSec from "./components/common/PortfolioSec";
 import PricingSec from "./components/common/PricingSec";
-import WhyChooseUs from "./components/common/WhyChooseUsSec";
+import WhyChooseUsSec from "./components/common/WhyChooseUsSec";
 import Title from "./components/UI/Title";
 import BlogSec from "./components/common/BlogSec";
+import ProfessionalSec from "./components/common/ProfessionalSec";
+import ContactSec from "./components/common/ContactSec";
 
 const Index = () => {
     return (
@@ -73,8 +75,10 @@ const Index = () => {
                 <ServiceSec />
                 <PortfolioSec />
                 <PricingSec />
-                <WhyChooseUs />
+                <WhyChooseUsSec />
                 <BlogSec />
+                <ProfessionalSec />
+                <ContactSec />
             </FrontLayout>
         </>
     );

@@ -18,7 +18,9 @@ const BlogBox = ({ ...data }) => {
                     {day} {month}
                 </div>
                 <div className="blog_box">
-                    <div className="blog_box_img back_img" style={{ backgroundImage: `url(${blogThumb.src})` }}></div>
+                    <div className="blog_box_img">
+                        <Image src={blogThumb.src} alt={title} width={550} height={550} />
+                    </div>
                     <div className="blog_box_content">
                         <div className="blog_box_author">
                             <Image src={authorImg.src} alt="Author Image" width={50} height={50} />
