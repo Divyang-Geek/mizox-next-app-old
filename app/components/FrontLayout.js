@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "./Footer";
 // Components
 import Header from "./Header";
 import localFont from "next/font/local";
@@ -55,7 +56,8 @@ const FrontLayout = ({ children }) => {
             `}</style>
 
             <Header />
-            {children}
+            <div className="page_wrap">{children}</div>
+            <Footer />
         </>
     );
 };

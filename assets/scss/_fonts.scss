@@ -1,16 +1,16 @@
 /*===== Font Family Start =====*/
-$font_default_path: "../fonts" !default;
+// $font_default_path: "../fonts" !default;
 
-@mixin font_family($font_name, $font_path, $font_weight: normal, $font_style: normal) {
-    @font-face {
-        font-family: $font_name;
-        src: url($font_path + ".eot");
-        src: url($font_path + ".eot?#iefix") format("embedded-opentype"), url($font_path + ".woff2") format("woff2"), url($font_path + ".woff") format("woff"), url($font_path + ".ttf") format("truetype");
-        font-weight: $font_weight;
-        font-style: $font_style;
-        font-display: swap;
-    }
-}
+// @mixin font_family($font_name, $font_path, $font_weight: normal, $font_style: normal) {
+//     @font-face {
+//         font-family: $font_name;
+//         src: url($font_path + ".eot");
+//         src: url($font_path + ".eot?#iefix") format("embedded-opentype"), url($font_path + ".woff2") format("woff2"), url($font_path + ".woff") format("woff"), url($font_path + ".ttf") format("truetype");
+//         font-weight: $font_weight;
+//         font-style: $font_style;
+//         font-display: swap;
+//     }
+// }
 
 // @include font_family("Sen", "#{$font_default_path}/Sen-Regular", 400);
 // @include font_family("Sen", "#{$font_default_path}/Sen-Bold", 700);
@@ -82,29 +82,13 @@ $h4_font_sizes: (
     // null: 24px,
     // small: 26px,
     // medium: 28px,
-    large: (
+    // large: (
+    //     20px,
+    //     1.2,
+    // ),
+    xLarge: (
         20px,
-        1.2,
-    ),
-);
-
-$h5_font_sizes: (
-    // null: 24px,
-    // small: 26px,
-    // medium: 28px,
-    large: (
-        1.5rem,
-        1.55,
-    ),
-);
-
-$h6_font_sizes: (
-    // null: 24px,
-    // small: 26px,
-    // medium: 28px,
-    large: (
-        1.25rem,
-        1.55,
+        1.5,
     ),
 );
 
@@ -112,21 +96,16 @@ $p_body_font_sizes: (
     // null: 24px,
     // small: 26px,
     // medium: 28px,
-    large: (
+    // large: (
+    //     16px,
+    //     1.5,
+    // ),
+    xLarge: (
         16px,
         1.5,
     ),
 );
 
-$subtitle_font_sizes: (
-    // null: 20px,
-    // small: 26px,
-    // medium: 28px,
-    large: (
-        20px,
-        24px,
-    ),
-);
 
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
     @each $fs-breakpoint, $fs-font-size in $fs-map {

@@ -25,6 +25,7 @@ $verticalShape: url(#{$imagePath}/shape-vertical.png);
     --secondary_color: #{$secondary_color};
     --tertiary_color: #{$tertiary_color};
     --quaternary_color: #{$quaternary_color};
+    --quinary_color: #{$quinary_color};
     --body_color: #{$body_color};
     --white_color: #{$white_color};
     --black_color: #{$black_color};
@@ -92,7 +93,7 @@ p {
     }
 }
 
-.white-text {
+.white_text {
     p,
     h1,
     h2,
@@ -271,6 +272,68 @@ p {
     text-align: center;
 }
 
+.form_input_wp {
+    position: relative;
+    display: block;
+
+    $controlClassName: ".form_input";
+
+    #{$controlClassName} {
+        display: block;
+        width: 100%;
+        height: 60px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--black_color);
+        background-color: var(--white_color);
+        padding: 18px;
+        outline: none !important;
+        border: none;
+        border-radius: var(--radius);
+        font-family: var(--primary_font);
+        appearance: none;
+
+        &::placeholder {
+            color: var(--black_color);
+        }
+    }
+
+    textarea#{$controlClassName} {
+        height: 175px;
+        resize: none;
+    }
+}
+
+.contact_info {
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 15px 46px;
+
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                font-size: 14px;
+                line-height: 1.5;
+
+                img {
+                    width: 15px;
+                    flex: 0 0 auto;
+                }
+            }
+        }
+    }
+
+    &.vertical {
+        ul {
+            flex-direction: column;
+            align-items: unset;
+        }
+    }
+}
+
 // Common End
 
 // Header Start
@@ -283,29 +346,10 @@ p {
         background-color: var(--tertiary_color);
         padding-block: 8px;
 
-        .top_header_contact {
-            ul {
-                display: flex;
-                align-items: center;
-                gap: 15px 46px;
-
-                li {
-                    &:last-child {
-                        margin-left: auto;
-                    }
-
-                    a {
-                        display: flex;
-                        align-items: center;
-                        gap: 15px;
-                        font-size: 14px;
-                        line-height: 1.5;
-
-                        img {
-                            width: 15px;
-                            flex: 0 0 auto;
-                        }
-                    }
+        .contact_info {
+            ul li {
+                &:last-child {
+                    margin-left: auto;
                 }
             }
         }
@@ -1122,9 +1166,96 @@ p {
 // Contact Start
 
 .contact_sec {
-    padding-block: 75px 0;
+    padding-block: 75px 150px;
 
     .sec_title {
         margin-bottom: 35px;
+    }
+
+    .contact_img {
+        position: relative;
+        width: 100%;
+        height: 550px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            width: 75%;
+            height: 100%;
+            background-color: var(--quaternary_color);
+            z-index: -1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .contact_form {
+        margin-left: 56px;
+        max-width: 650px;
+        position: relative;
+
+        &:before {
+            @include back_img;
+            background-image: $dotShape;
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            right: 75px;
+            width: 75px;
+            height: 156px;
+            z-index: -1;
+        }
+
+        .row {
+            --bs-gutter-y: 1.5rem;
+        }
+    }
+}
+
+// Contact End
+
+// Footer Start
+
+.main_footer {
+    padding-block: 100px;
+    background-color: var(--quinary_color);
+
+    .footer_left,
+    .footer_gallery_wp,
+    .footer_contact {
+        .h4_title {
+            margin-bottom: 24px;
+        }
+    }
+
+    .footer_gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+
+        .footer_gallery_img {
+            width: 100%;
+
+            img {
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .footer_left,
+    .footer_contact {
+        max-width: 100%;
+        width: 280px;
+    }
+
+    .footer_contact {
+        margin-left: auto;
     }
 }
